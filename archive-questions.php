@@ -9,7 +9,7 @@
 		<section class="content">
 			<div class="left">
 				<h3><?php echo get_field('call_to_action', 12); ?></h3>
-				<p><a class="button toggle-modal-question" href="/">Ask a Question</a></p>
+				<p><a class="button toggle-modal-question" href="/">Submit Question</a></p>
 			</div>
 			<div class="right">
 				<?php get_template_part('loop-questions'); ?>

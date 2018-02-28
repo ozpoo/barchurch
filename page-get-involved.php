@@ -8,54 +8,59 @@
 
 		<section class="content">
 
+			<?php $group = get_field('question'); ?>
 			<div class="left">
-				<h3>Ask a Question</h3>
+				<h3><?php echo $group['title']; ?></h3>
 			</div>
 			<div class="right">
 				<div class="main">
-					<p>Lorem ipsum dolor sit amet, ex sea commune deserunt, nullam mentitum cu sed. Meis mundi alterum vel et. Mel atqui phaedrum posidonium et, id quo mollis admodum. Essent laoreet ei cum, ex molestie dignissim sit, vel prodesset similique ne.</p>
+					<p><?php echo $group['description']; ?></p>
 				</div>
 				<p><a class="button toggle-modal-question" href="/">Submit Question</a></p>
 			</div>
 
+			<?php $group = get_field('experience'); ?>
 			<div class="left">
-				<h3>Share Your Experience</h3>
+				<h3><?php echo $group['title']; ?></h3>
 			</div>
 			<div class="right">
 				<div class="main">
-					<p>Lorem ipsum dolor sit amet, ex sea commune deserunt, nullam mentitum cu sed. Meis mundi alterum vel et. Mel atqui phaedrum posidonium et, id quo mollis admodum. Essent laoreet ei cum, ex molestie dignissim sit, vel prodesset similique ne.</p>
+					<p><?php echo $group['description']; ?></p>
 				</div>
 				<p><a class="button toggle-modal-experience" href="/">Submit Experience</a></p>
 			</div>
 
+			<?php $group = get_field('ideas'); ?>
 			<div class="left">
-				<h3>Submit Event Ideas</h3>
+				<h3><?php echo $group['title']; ?></h3>
 			</div>
 			<div class="right">
 				<div class="main">
-					<p>Lorem ipsum dolor sit amet, ex sea commune deserunt, nullam mentitum cu sed. Meis mundi alterum vel et. Mel atqui phaedrum posidonium et, id quo mollis admodum. Essent laoreet ei cum, ex molestie dignissim sit, vel prodesset similique ne.</p>
+					<p><?php echo $group['description']; ?></p>
 				</div>
 				<p><a class="button toggle-modal-idea" href="/">Submit Idea</a></p>
 			</div>
 
+			<?php $group = get_field('donate'); ?>
 			<div class="left">
-				<h3>Donate</h3>
+				<h3><?php echo $group['title']; ?></h3>
 			</div>
 			<div class="right">
 				<div class="main">
-					<p>Lorem ipsum dolor sit amet, ex sea commune deserunt, nullam mentitum cu sed. Meis mundi alterum vel et. Mel atqui phaedrum posidonium et, id quo mollis admodum. Essent laoreet ei cum, ex molestie dignissim sit, vel prodesset similique ne.</p>
+					<p><?php echo $group['description']; ?></p>
 				</div>
 				<p><a class="button" href="https://barchurch.churchcenter.com/giving?open-in-church-center-modal=true">Donate Now</a></p>
 			</div>
 
+			<?php $group = get_field('newsletter'); ?>
 			<div class="left">
-				<h3>Join the Community</h3>
+				<h3><?php echo $group['title']; ?></h3>
 			</div>
 			<div class="right">
 				<div class="main">
-					<p>Lorem ipsum dolor sit amet, ex sea commune deserunt, nullam mentitum cu sed. Meis mundi alterum vel et. Mel atqui phaedrum posidonium et, id quo mollis admodum. Essent laoreet ei cum, ex molestie dignissim sit, vel prodesset similique ne.</p>
+					<p><?php echo $group['description']; ?></p>
 				</div>
-				<p><a class="button toggle-modal-newsletter" href="/">Newsletter Registration</a></p>
+				<p><a class="button toggle-modal-newsletter" href="/">Sign Up</a></p>
 			</div>
 
 		</section>

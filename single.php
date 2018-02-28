@@ -2,49 +2,95 @@
 
 	<main role="main">
 
-		<section>
+		<div class="title-fade show">
+			<h1>Journal</h1>
+		</div>
 
-			<?php if (have_posts()): while (have_posts()) : the_post(); ?>
-
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-					<?php if ( has_post_thumbnail()) : ?>
-						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-							<?php the_post_thumbnail(); ?>
-						</a>
-					<?php endif; ?>
-
-					<h1>
-						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-					</h1>
-
-					<span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
-					<span class="author"><?php _e( 'Published by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
-
-					<?php the_content(); ?>
-
-					<?php the_tags( __( 'Tags: ', 'html5blank' ), ', ', '<br>'); ?>
-
-					<p><?php _e( 'Categorised in: ', 'html5blank' ); the_category(', '); ?></p>
-
-					<p><?php _e( 'This post was written by ', 'html5blank' ); the_author(); ?></p>
-
-				</article>
-
-			<?php endwhile; ?>
-
-			<?php else: ?>
-
-				<article>
-
-					<h1>Sorry, nothing to display.</h1>
-
-				</article>
-
-			<?php endif; ?>
-
+		<section class="content">
+			<div class="top">
+				<p><a class="button active" href="<?php echo site_url( '/journal/', 'http' ); ?>">All</a><a class="button" href="<?php echo site_url( '/category/learn/', 'http' ); ?>">Learn</a><a class="button" href="<?php echo site_url( '/category/do/', 'http' ); ?>">Do</a></p>
+			</div>
+			<?php get_template_part('loop'); ?>
 		</section>
 
+		<!-- <section class="pagination">
+			<?php
+				if(get_adjacent_post(false, '', true )){
+						$nextPost = get_adjacent_post(false, '', true );
+						$nextPost = get_the_permalink( $nextPost->ID );
+				} else {
+						$nextPost = new WP_Query('posts_per_page=1&order=ASC&orderby=menu_order');
+						$nextPost->the_post();
+						$nextPost = get_the_permalink( $nextPost->ID );
+						wp_reset_query();
+				}
+				if(get_adjacent_post(false, '', false )){
+					$prevPost = get_adjacent_post(false, '', false );
+					$prevPost = get_the_permalink( $prevPost->ID );
+				} else {
+					$prevPost = new WP_Query('posts_per_page=1&order=DESC&orderby=menu_order');
+					$prevPost->the_post();
+					$prevPost = get_the_permalink( $prevPost->ID );
+					wp_reset_query();
+				}
+			?>
+
+			<ul>
+				<li><a href="<?php echo $nextPost; ?>">Next Post <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></li>
+				<li><a href="<?php echo $prevPost; ?>">Previous Post <i class="fa fa-long-arrow-left" aria-hidden="true"></i></a></li>
+			</ul>
+		</section> -->
+
 	</main>
+
+	<script>
+
+		(function ($, root, undefined) {
+
+			$(function () {
+
+				var offsetLeft, offsetTop, lastX, lastY, pos;
+
+				$(window).load(function(){
+
+					init();
+					animate();
+
+				});
+
+				$(window).resize (function() {
+
+				});
+
+				var init = function() {
+
+					setTimeout(function(){
+						$(".title-fade").removeClass("show");
+					}, 1220);
+
+				}
+
+				var animate = function(time) {
+
+					requestAnimationFrame( animate );
+
+				}
+
+				var requestAnimationFrame = (function(){
+				 return  window.requestAnimationFrame       ||
+								 window.webkitRequestAnimationFrame ||
+								 window.mozRequestAnimationFrame    ||
+								 window.oRequestAnimationFrame      ||
+								 window.msRequestAnimationFrame     ||
+								 function(callback, element){
+										 window.setTimeout(callback, 1000 / 60);
+								 };
+				 })();
+
+			});
+
+		})(jQuery, this);
+
+	</script>
 
 <?php get_footer(); ?>

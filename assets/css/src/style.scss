@@ -309,6 +309,21 @@ a {
     }
   }
 
+  &.button-small {
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid $black;
+    backface-visibility: hidden;
+    background: transparent;
+    line-height: 1;
+    transition: 220ms background cubic-bezier(.165, .84, .44, 1);
+    will-change: background;
+
+    &:hover {
+      background: $white;
+    }
+  }
+
 	&:focus {
 		outline: 0;
 	}
@@ -996,18 +1011,18 @@ header {
     }
 
     input[type=text], input[type=email] {
-      border-bottom: 1px solid $white;
+      border-bottom: 2px solid $white;
       width: 100%;
     }
 
     input[type=submit] {
-      border: 1px solid $white;
+      border: 2px solid $white;
       padding: 10px;
       line-height: 1;
     }
 
     textarea {
-      border: 1px solid $white;
+      border: 2px solid $white;
       padding: $unit-01;
       width: 100%;
       margin-top: 26px;
@@ -1114,11 +1129,53 @@ header {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100%
+    height: 100%;
+
+    #calendar {
+      width: 100%;
+      max-width: 620px;
+
+      .header{
+        width:100%;
+      }
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0px;
+        border-top: 2px solid $white;
+        margin: $unit-02;
+
+        li {
+          width: 14.2857%;
+          border-bottom: 2px solid $white;
+
+          .area {
+            display: block;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            margin: auto;
+            text-align: center;
+            line-height: 40px;
+            margin: $unit-01 0;
+            color: rgba(255,255,255,.4);
+            border: 2px solid transparent;
+          }
+
+          &.active {
+            .area{
+              border-color: $white;
+              color: $white;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
-.journal, .category {
+.journal, .category, .single {
 
   .title-fade {
     display: flex;
@@ -1148,7 +1205,7 @@ header {
   }
 
   .content {
-    padding-top: 25vh;
+    padding-top: 20vh;
     padding-bottom: 20vh;
 
     .top {
@@ -1172,12 +1229,16 @@ header {
         padding: 8vh 8vw;
         padding-right: 0px;
 
-        h3 {
-          padding-right: 0px;
-        }
-
         a {
           border-bottom: 1px solid $black;
+
+          &:hover {
+            border-bottom-color: transparent;
+          }
+        }
+
+        h3 {
+          padding-right: 0px;
         }
       }
 

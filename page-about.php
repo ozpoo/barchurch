@@ -255,11 +255,9 @@
 											<p>We committed from day one that we would use many of our Sundays to be generous with both our time and money. So, for our anniversary, we donated $10 for every person that came to organizations we love and worked with in our first year.</p>
 											<div class="sub-nav">
 												<div class="read">
-													<p><a href="/">Read More</a></p>
+													<p><a href="https://www.facebook.com/pg/barchurchSEA/events" target="_blank" class="icon-link-l"><i class="fas fa-book"></i> Read More</a></p>
 												</div>
-												<div class="other">
-													<p><a href="https://www.google.com/maps/dir/''/5449+Ballard+Ave+NW,+Seattle,+WA+98107/@47.6683472,-122.4564102,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x549015c5d4ea8969:0xab0960f5e817bd12!2m2!1d-122.3863705!2d47.6683685" target="_blank">Directions <i class="fas fa-map-marker"></i></a></p>
-												</div>
+												<div class="other"></div>
 											</div>
 										</div>
 									</li>

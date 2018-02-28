@@ -286,4 +286,33 @@ add_action( 'admin_head-options-general.php', function() {
 // }
 // $new_general_setting = new new_general_setting( array('facebook_url', 'facebook_icon', 'Endereço do facebook') );
 
+function my_acf_admin_head() {
+	?>
+	<style type="text/css">
+  /* Custom columns */
+    .acf-fields > .acf-field.half {
+      width: 50%;
+      box-sizing: border-box;
+      float: left;
+      clear: none;
+    }
+    .acf-fields > .acf-field.third {
+      width: 33.33%;
+      box-sizing: border-box;
+      float: left;
+      clear: none;
+    }
+    .acf-fields > .acf-field.no-top-border {
+      border-top: none;
+    }
+	</style>
+	<?php
+}
+add_action('acf/input/admin_head', 'my_acf_admin_head');
+
+function RemoveAddMediaButtons(){
+  remove_action( 'media_buttons', 'media_buttons' );
+}
+add_action('admin_head', 'RemoveAddMediaButtons');
+
 ?>
