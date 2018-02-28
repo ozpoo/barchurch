@@ -129,7 +129,7 @@
 
 				<section class="collage">
 					<div class="text">
-						<h2>Low Bar, High Spirits</h2>
+						<h2>Low Bar,<br>High Spirits</h2>
 						<p>
 							<svg version="1.1"
 								 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
@@ -140,7 +140,7 @@
 						 </p>
 					</div>
 					<div class="image">
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/collage.jpg" />
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/collage.jpg?v=1" />
 					</div>
 					<div class="illustration">
 						<svg version="1.1"
@@ -189,7 +189,6 @@
 						</div>
 					</div>
 					<div class="right">
-						<?php echo 'Current PHP version: ' . phpversion(); ?>
 						<h3>Upcoming Sunday Events</h3>
 						<div class="event-list">
 							<div class="toggle-list">
