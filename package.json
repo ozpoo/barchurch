@@ -3,7 +3,7 @@
     "type": "git",
     "url": "git://github.com/ozpoo/scaffold.git"
   },
-  "name": "BarChurch",
+  "name": "barchurch",
   "private": true,
   "version": "1.0.0",
   "description": "Template for Bar Church",

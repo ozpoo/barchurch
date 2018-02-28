@@ -29,6 +29,31 @@
 				$(".events-modal").toggleClass("show");
 			});
 
+			$(".toggle-modal-contact").on("click", function(ev){
+				ev.preventDefault();
+				$(".contact-modal").toggleClass("show");
+			});
+
+			$(".toggle-modal-question").on("click", function(ev){
+				ev.preventDefault();
+				$(".question-modal").toggleClass("show");
+			});
+
+			$(".toggle-modal-experience").on("click", function(ev){
+				ev.preventDefault();
+				$(".experience-modal").toggleClass("show");
+			});
+
+			$(".toggle-modal-idea").on("click", function(ev){
+				ev.preventDefault();
+				$(".idea-modal").toggleClass("show");
+			});
+
+			$(".toggle-modal-newsletter").on("click", function(ev){
+				ev.preventDefault();
+				$(".newsletter-modal").toggleClass("show");
+			});
+
 			$(".menu-main").data("transform", 0);
 			lastScrollTop = scrollTop = $(document).scrollTop();
 

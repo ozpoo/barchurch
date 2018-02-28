@@ -1,32 +1,31 @@
-<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+<div class="posts">
 
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+		<article class="post">
 
-		<?php if ( has_post_thumbnail()) : ?>
-			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-				<?php the_post_thumbnail(array(120,120)); ?>
-			</a>
-		<?php endif; ?>
+			<div class="left">
+				<h3><?php the_title(); ?></h3>
+				<!-- <p>
+					<?php $categories = get_the_category(); ?>
+					<a href="<?php echo site_url( '/category/' . $categories[0]->slug, 'http' ); ?>"><?php echo esc_html( $categories[0]->name ); ?></a>
+				</p> -->
+			</div>
 
-		<h2>
-			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-		</h2>
+			<div class="right">
+				<div class="main">
+					<p><small><?php echo get_the_date(); ?></small></p>
+					<?php the_content(); ?>
+				</div>
+				<div class="sub">
+					<?php echo get_field("sub"); ?>
+				</div>
+				<div class="footer">
+					<p><a href="<?php echo site_url( '/category/' . $categories[0]->slug, 'http' ); ?>" class="button"><?php echo esc_html( $categories[0]->name ); ?></a></p>
+				</div>
+				<p><span class="rule"></span></p>
+			</div>
 
-		<span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
-		<span class="author"><?php _e( 'Published by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
+		</article>
+	<?php endwhile; endif; ?>
 
-		<?php the_excerpt(); ?>
-
-	</article>
-
-<?php endwhile; ?>
-
-<?php else: ?>
-
-	<article>
-
-		<h2>Sorry, nothing to display.</h2>
-
-	</article>
-
-<?php endif; ?>
+</div>

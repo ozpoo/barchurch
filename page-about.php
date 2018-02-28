@@ -129,7 +129,7 @@
 
 				<section class="collage">
 					<div class="text">
-						<h2>A safe space aimed at<br>making the world a<br>much better place.</h2>
+						<h2>Low Bar, High Spirits</h2>
 						<p>
 							<svg version="1.1"
 								 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
@@ -169,12 +169,12 @@
 
 				<section class="intro">
 					<div class="text">
-						<h2>We aspire to create a safe place for people of all backgrounds to explore spirituality through the lens of Jesus while actively working together to tangibly make the world a better place.</h2>
+						<h2>We're about two things: 1 &mdash; Creating a safe place for people to honestly explore spirituality. 2 &mdash; Working together to tangibly make the world a better place.</h2>
 					</div>
 					<div class="buttons">
 						<p>
-							<a href="/" class="button">Donate</a>
-							<a href="/" class="button">Participate</a>
+							<a href="https://barchurch.churchcenter.com/giving?open-in-church-center-modal=true" class="button">Donate</a>
+							<a href="<?php echo site_url( '/get-involved', 'http' ); ?>" class="button">Participate</a>
 						</p>
 					</div>
 				</section>
@@ -192,7 +192,7 @@
 						<h3>Upcoming Sunday Events</h3>
 						<div class="event-list">
 							<div class="toggle-list">
-								<p><button>Internal</button><button>External</button></p>
+								<p><button class="active">Learn</button><button>Do</button></p>
 							</div>
 							<div class="frame">
 								<ul>
@@ -200,13 +200,12 @@
 										<p class="toggle-event"><button>Sep 17 — Trading Places</button></p>
 										<div class="description">
 											<p>We committed from day one that we would use many of our Sundays to be generous with both our time and money. So, for our anniversary, we donated $10 for every person that came to organizations we love and worked with in our first year.</p>
-											<p><button class="scroll-to" data-section="safe-place">More</button></p>
 											<div class="sub-nav">
 												<div class="read">
-													<p><a href="/">Read More</a></p>
+													<p><a href="https://www.facebook.com/pg/barchurchSEA/events" target="_blank" class="icon-link-l"><i class="far fa-envelope-open"></i> RSVP</a></p>
 												</div>
 												<div class="other">
-													<p><a href="/">Share</a><a href="/">Directions</a></p>
+													<p><a href="https://www.google.com/maps/dir/''/5449+Ballard+Ave+NW,+Seattle,+WA+98107/@47.6683472,-122.4564102,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x549015c5d4ea8969:0xab0960f5e817bd12!2m2!1d-122.3863705!2d47.6683685" target="_blank" class="icon-link-r">Directions <i class="fas fa-map-marker"></i></a></p>
 												</div>
 											</div>
 										</div>
@@ -217,10 +216,10 @@
 											<p>We committed from day one that we would use many of our Sundays to be generous with both our time and money. So, for our anniversary, we donated $10 for every person that came to organizations we love and worked with in our first year.</p>
 											<div class="sub-nav">
 												<div class="read">
-													<p><a href="/">Read More</a></p>
+													<p><a href="https://www.facebook.com/pg/barchurchSEA/events" target="_blank" class="icon-link-l"><i class="far fa-envelope-open"></i> RSVP</a></p>
 												</div>
 												<div class="other">
-													<p><a href="/">Share</a><a href="/">Directions</a></p>
+													<p><a href="https://www.google.com/maps/dir/''/5449+Ballard+Ave+NW,+Seattle,+WA+98107/@47.6683472,-122.4564102,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x549015c5d4ea8969:0xab0960f5e817bd12!2m2!1d-122.3863705!2d47.6683685" target="_blank" class="icon-link-r">Directions <i class="fas fa-map-marker"></i></a></p>
 												</div>
 											</div>
 										</div>
@@ -229,12 +228,12 @@
 							</div>
 						</div>
 
-						<p><a href="/" class="button">View All</a></p>
+						<p><a href="https://www.facebook.com/pg/barchurchSEA/events" target="_blank" class="button">RSVP</a></p>
 
 						<h3>Past Sunday Events</h3>
 						<div class="event-list">
 							<div class="toggle-list">
-								<p><button>Internal</button><button>External</button></p>
+								<p><button class="active">Learn</button><button>Do</button></p>
 							</div>
 							<div class="frame">
 								<ul>
@@ -242,14 +241,11 @@
 										<p class="toggle-event"><button>Sep 17 — Trading Places</button></p>
 										<div class="description">
 											<p>We committed from day one that we would use many of our Sundays to be generous with both our time and money. So, for our anniversary, we donated $10 for every person that came to organizations we love and worked with in our first year.</p>
-											<p><button class="scroll-to" data-section="better-world">More</button></p>
 											<div class="sub-nav">
 												<div class="read">
-													<p><a href="/">Read More</a></p>
+													<p><a href="https://www.facebook.com/pg/barchurchSEA/events" target="_blank" class="icon-link-l"><i class="fas fa-book"></i> Read More</a></p>
 												</div>
-												<div class="other">
-													<p><a href="/">Share</a><a href="/">Directions</a></p>
-												</div>
+												<div class="other"></div>
 											</div>
 										</div>
 									</li>
@@ -262,7 +258,7 @@
 													<p><a href="/">Read More</a></p>
 												</div>
 												<div class="other">
-													<p><a href="/">Share</a><a href="/">Directions</a></p>
+													<p><a href="https://www.google.com/maps/dir/''/5449+Ballard+Ave+NW,+Seattle,+WA+98107/@47.6683472,-122.4564102,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x549015c5d4ea8969:0xab0960f5e817bd12!2m2!1d-122.3863705!2d47.6683685" target="_blank">Directions <i class="fas fa-map-marker"></i></a></p>
 												</div>
 											</div>
 										</div>
@@ -282,7 +278,7 @@
 						<p>Marshawn Lynch</p>
 					</div>
 					<div class="body">
-						<p>Let’s say, hypothetically, Jesus decided to stick around and start a church. What do you think it would it look like? Would people sit in rows? Who would be invited? Good news. We have a pretty good idea of what it’d look like.</p>
+						<p>If Jesus decided to stick around and start a church &mdash; what would it look like?</p>
 					</div>
 				</section>
 
@@ -309,10 +305,10 @@
 									<rect x="13.3" y="25.6" class="st1" width="23.8" height="2.5"/>
 									<rect x="13.3" y="31.7" class="st1" width="23.8" height="2.5"/>
 								</svg>
-								Internal Events
+								Learn
 							</h4>
 							<p>Jesus spent roughly half his time meeting people where they were at (primarily telling stories — about 40 of them).  He created environments where people could learn more about what it means to be human, ask questions, argue, doubt, celebrate, and mourn. Lorem ipsum dolor sit amet, consectetuer adipiscing elit sed diam nonummy nibh euismod.</p>
-							<p><a href="/" class="button">Internal Blog</a></p>
+							<p><a href="<?php echo site_url( '/category/learn/', 'http' ); ?>" class="button">Learn Blog</a></p>
 						</div>
 						<div class="struc">
 							<h4>
@@ -333,9 +329,9 @@
 									c-0.7,0.7-1.9,0.7-2.6,0L43.4,46c0,0,0,0-0.1-0.1l0,0L30.7,33.3c0.5-0.3,1-0.7,1.4-1.2c0.4-0.4,0.8-0.9,1.2-1.4l15.9,15.9
 									c0.3,0.3,0.5,0.8,0.5,1.3S49.5,48.9,49.2,49.2z"/>
 								</svg>
-								External Events</h4>
+								Do</h4>
 							<p>He spent the other half of his time actually, physically, litertally helping people primarily performing miracles — about 40 of them. He seemed just as concerned about helping people in their present as he did about their future. We figure if it’s good enough for the man Himself, it’s probably a decent model.</p>
-							<p><a href="/" class="button">External Blog</a></p>
+							<p><a href="<?php echo site_url( '/category/do/', 'http' ); ?>" class="button">Do Blog</a></p>
 						</div>
 					</div>
 				</section>
@@ -374,7 +370,7 @@
 						<p>Jim White</p>
 					</div>
 					<div class="body">
-						<p>We meet in a bar because bars don’t suck. We buy your first drink — It doesn’t have to be alcohol but that’s where we start. We don’t sing a bunch of rock songs nobody knows, ask you to dress up, or bring a giant book.</p>
+						<p>We meet in a bar because bars don’t suck. Bars are already where important conversations are happening. It’s where we talk through things we don't understand. Bars are our confessionals. Where strangers become friends. Where people celebrate, relax, laugh, argue, process and grieve. Isn’t this what a church should be?</p>
 					</div>
 				</section>
 
@@ -428,17 +424,13 @@
 								A Better World</h4>
 							<p>Sundays are a church’s most valuable asset. We committed from day one that we would use much of our Sundays to be generous with both our time and money. We are far more interested in making a big impact than being a big church. With that in mind, we dedicate around half of our Sundays to tangibly making the world better by either:</p>
 							<p>
-								<u>01 — Charity</u>
-							</p>
-							<p>
+								<u>01 — Action</u><br>
 								Doing something beneficial for the world together (making lunches for the homeless, gathering household items for charities, clothing drives for foster kids).</p>
 							<p>
-								<u>02 — Education</u>
-							</p>
-							<p>
+								<u>02 — Education</u><br>
 								Inviting non-profit leaders and experts to share what they do and
 								educate us on HOW to best help (investing in vulnerable youth, how to support refugees)</p>
-							<p><a href="/" class="button">Past Events</a></p>
+							<p><a href="<?php echo site_url( '/journal', 'http' ); ?>" class="button">Past Events</a></p>
 						</div>
 					</div>
 				</section>
@@ -478,8 +470,8 @@
 								</svg>
 								All Are Welcome
 							</h4>
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate.</p>
-							<p><a href="/" class="button">Join Us</a></p>
+							<p>Who’s BC For? Everyone. Truly. There’s no “but”…</p>
+							<p><a href="https://www.facebook.com/pg/barchurchSEA/events" target="_blank" class="button">Show Up</a></p>
 						</div>
 					</div>
 				</section>
@@ -490,8 +482,8 @@
 					</div>
 					<div class="buttons">
 						<p>
-							<a href="/" class="button">Donate</a>
-							<a href="/" class="button">Participate</a>
+							<a href="https://barchurch.churchcenter.com/giving?open-in-church-center-modal=true" class="button">Donate</a>
+							<a href="<?php echo site_url( '/get-involved', 'http' ); ?>" class="button">Participate</a>
 						</p>
 					</div>
 				</section>

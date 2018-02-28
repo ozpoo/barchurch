@@ -3,14 +3,17 @@
 	<main role="main">
 
 		<div class="title-fade show">
-			<h1>Journal</h1>
+				<h1>Questions</h1>
 		</div>
 
 		<section class="content">
-			<div class="top">
-				<p><a class="button active" href="<?php echo site_url( '/journal/', 'http' ); ?>">All</a><a class="button" href="<?php echo site_url( '/category/learn/', 'http' ); ?>">Learn</a><a class="button" href="<?php echo site_url( '/category/do/', 'http' ); ?>">Do</a></p>
+			<div class="left">
+				<h3><?php echo get_field('call_to_action', 12); ?></h3>
+				<p><a class="button toggle-modal-question" href="/">Ask a Question</a></p>
 			</div>
-			<?php get_template_part('loop'); ?>
+			<div class="right">
+				<?php get_template_part('loop-questions'); ?>
+			</div>
 		</section>
 
 	</main>
@@ -39,6 +42,11 @@
 					setTimeout(function(){
 						$(".title-fade").removeClass("show");
 					}, 1220);
+
+					$(".toggle-question button").on("click", function(){
+						$(this).closest(".question").find(".answer").slideToggle();
+						$(this).toggleClass("open");
+					});
 
 				}
 

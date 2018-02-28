@@ -45,6 +45,134 @@
 }
 @include meyer-reset;
 
+@mixin form-reset {
+  input,
+  label,
+  select,
+  button,
+  textarea {
+  	display:inline-block;
+  	margin:0;
+  	padding:0;
+  	border:0;
+  	background:none;
+    color: inherit;
+  	font-family: inherit;
+  	/* Browsers have different default form fonts */
+  	font-size:inherit;
+  	line-height: inherit;
+  	white-space:normal;
+  	vertical-align:middle;
+  }
+
+  input {
+    -webkit-appearance: none;
+  }
+
+  /* Remove the stupid outer glow in Webkit */
+  input:focus,
+  button:focus,
+  select:focus,
+  textarea:focus {
+    border: none;
+    outline: 0;
+  }
+
+  /* Box Sizing Reset
+  -----------------------------------------------*/
+
+  /* All of our custom controls should be what we expect them to be */
+  input,
+  textarea {
+  	box-sizing:border-box;
+  }
+
+  /* These elements are usually rendered a certain way by the browser */
+  button,
+  input[type=reset],
+  input[type=button],
+  input[type=submit],
+  input[type=checkbox],
+  input[type=radio],
+  select {
+  	box-sizing:border-box;
+  }
+
+  input[type=date],
+  input[type=datetime],
+  input[type=datetime-local],
+  input[type=email],
+  input[type=month],
+  input[type=number],
+  input[type=password],
+  input[type=range],
+  input[type=search],
+  input[type=tel],
+  input[type=text],
+  input[type=time],
+  input[type=url],
+  input[type=week] {
+
+  }
+
+  input[type=checkbox],
+  input[type=radio] {
+  	width:13px;
+  	height:13px;
+  }
+
+  input[type=file] {
+
+  }
+
+  /* Make webkit render the search input like a normal text field */
+  input[type=search] {
+  	-webkit-appearance:textfield;
+  	-webkit-box-sizing:content-box;
+  }
+
+  /* Turn off the recent search for webkit. It adds about 15px padding on the left */
+  ::-webkit-search-decoration {
+  	display:none;
+  }
+
+  /* Buttons
+  -----------------------------------------------*/
+
+  button,
+  input[type="reset"],
+  input[type="button"],
+  input[type="submit"] {
+  	width:auto;
+  	/* Fix IE7 display bug */
+  	overflow:visible;
+  }
+
+  /* IE8 and FF freak out if this rule is within another selector */
+  ::-webkit-file-upload-button {
+  	padding:0;
+  	border:0;
+  	background:none;
+  }
+
+  textarea {
+  	/* Turn off scroll bars in IE unless needed */
+  	overflow:auto;
+  	/* Move the label to the top */
+  	vertical-align:top;
+  }
+
+  select {
+
+  }
+
+  select[multiple] {
+  	/* Move the label to the top */
+  	vertical-align:top;
+  }
+}
+@include form-reset;
+
 @mixin button-reset {
     -webkit-font-smoothing: inherit;
     -moz-osx-font-smoothing: inherit;
@@ -72,6 +200,7 @@
 }
 
 $black: #1c1c1c;
+$white: white;
 $grey-01: #dfdfdf;
 $grey-02: #cecece;
 $grey-03: #d6d6d6;
@@ -119,6 +248,12 @@ body {
   &.show {
     opacity: 1;
   }
+}
+
+small {
+  font-size: .6em;
+  text-transform: uppercase;
+  letter-spacing: .04em;
 }
 
 img, video {
@@ -186,14 +321,6 @@ a {
 u {
   border-bottom: 1px solid $black;
   text-decoration: none;
-}
-
-input {
-
-	&:focus {
-		border: 1px solid grey;
-		outline: 0;
-	}
 }
 
 button {
@@ -296,6 +423,7 @@ header {
       }
 
       .drawer {
+        display: block;
         position: relative;
         width: 100%;
         height: 110px;
@@ -552,6 +680,52 @@ header {
       .event-list {
         padding-bottom: $unit-02;
 
+        .toggle-list {
+
+          button {
+            border-bottom: 1px solid transparent;
+            margin-left: $unit-01;
+
+            &:hover, &.active {
+              border-bottom: 1px solid $black;
+            }
+          }
+        }
+
+        .icon-link-l {
+          font-size: .8em;
+
+          svg {
+            margin-right: 10px;
+            backface-visibility: hidden;
+            transition: 440ms margin-right cubic-bezier(.165, .84, .44, 1);
+            will-change: transform;
+          }
+
+          &:hover {
+            svg {
+              margin-right: 20px;
+            }
+          }
+        }
+
+        .icon-link-r {
+          font-size: .8em;
+
+          svg {
+            margin-left: 10px;
+            backface-visibility: hidden;
+            transition: 440ms margin-left cubic-bezier(.165, .84, .44, 1);
+            will-change: transform;
+          }
+
+          &:hover {
+            svg {
+              margin-left: 20px;
+            }
+          }
+        }
+
         ul {
           padding-top: 0px;
           padding-bottom: 0px;
@@ -574,15 +748,6 @@ header {
 
               p {
                 padding-top: 0px;
-              }
-
-              a {
-                border-bottom: 1px solid $black;
-                font-size: .8em;
-
-                &:hover {
-                  border-bottom-color: transparent;
-                }
               }
 
               .read {
@@ -795,7 +960,7 @@ header {
   }
 }
 
-.events-modal {
+.modal {
   position: fixed;
   top: 0px;
   left: 0px;
@@ -809,17 +974,59 @@ header {
   transition: 660ms opacity cubic-bezier(.165, .84, .44, 1);
   will-change: opacity;
   z-index: 1000;
+  display: flex;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
 
-  .calendar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  p {
+    padding-top: $unit-01;
+    padding-bottom: $unit-01;
+  }
+
+  .form {
+    max-width: 620px;
+    padding: 12vh $unit-01;
+    margin: auto;
     width: 100%;
-    height: 100%
+
+    label {
+      font-size: .6em;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+
+    input[type=text], input[type=email] {
+      border-bottom: 1px solid $white;
+      width: 100%;
+    }
+
+    input[type=submit] {
+      border: 1px solid $white;
+      padding: 10px;
+      line-height: 1;
+    }
+
+    textarea {
+      border: 1px solid $white;
+      padding: $unit-01;
+      width: 100%;
+      margin-top: 26px;
+    }
+  }
+
+  .title {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    font-size: 1.4em;
+
+    p {
+      padding-left: 8vw;
+    }
   }
 
   .close {
-    position: absolute;
+    position: fixed;
     top: 0px;
     right: 0px;
 
@@ -875,7 +1082,43 @@ header {
   }
 }
 
-.journal {
+.share-modal {
+
+}
+
+.contact-modal {
+
+}
+
+.question-modal {
+
+}
+
+.experience-modal {
+
+}
+
+.idea-modal {
+
+}
+
+.newsletter-modal {
+
+}
+
+
+.events-modal {
+
+  .calendar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%
+  }
+}
+
+.journal, .category {
 
   .title-fade {
     display: flex;
@@ -910,6 +1153,14 @@ header {
 
     .top {
       padding: 0 8vw;
+
+      .button {
+        margin-right: $unit-01;
+
+        &.active {
+          background: transparent;
+        }
+      }
     }
 
     .post {
@@ -981,7 +1232,7 @@ header {
   }
 }
 
-.questions {
+.post-type-archive-questions {
 
   .title-fade {
     display: flex;
@@ -1027,6 +1278,7 @@ header {
 
       h3, p {
         padding-right: 0px;
+        padding-left: 0px;
       }
     }
 
@@ -1093,10 +1345,131 @@ header {
   }
 }
 
+.get-involved {
+
+  .title-fade {
+    display: flex;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    pointer-events: none;
+    transition: 1220ms opacity cubic-bezier(.165, .84, .44, 1);
+    will-change: opacity;
+    z-index: 100;
+
+    &.show {
+      opacity: 1;
+    }
+
+    h1 {
+      padding: 0px;
+      color: white;
+      font-size: 9em;
+      line-height: 1;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 25vh;
+    padding-bottom: 20vh;
+
+    .left {
+      width: 30vw;
+      padding: 8vh 8vw;
+      padding-right: 0px;
+
+      h3 {
+        padding-top: 0px;
+      }
+
+      h3, p {
+        padding-right: 0px;
+      }
+    }
+
+    .right {
+      width: 70vw;
+      padding: 8vh 8vw;
+
+      .main {
+        font-size: 1.3em;
+        line-height: 1.5;
+      }
+
+      p {
+        padding-top: 0px;
+        padding-left: 0px;
+      }
+    }
+  }
+}
+
 footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8vh 0vw;
-  background: $black
+  padding: 12vh 4vw;
+  background: $black;
+  color: $white;
+
+  a {
+    color: $white;
+  }
+
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    p, ul {
+      padding: $unit-01;
+    }
+
+    .g-logo {
+      width: 15%;
+      svg {
+        width: 100%;
+      }
+    }
+
+    .g-contact {
+      width: 25%;
+    }
+
+    .g-learn {
+      width: 15%;
+    }
+
+    .g-connect {
+      width: 15%;
+    }
+
+    .g-newsletter {
+      width: 30%;
+
+      label {
+        font-size: .6em;
+        text-transform: uppercase;
+        letter-spacing: .04em;
+      }
+
+      input[type=text], input[type=email] {
+        border-bottom: 1px solid $white;
+        width: 100%;
+      }
+
+      input[type=submit] {
+        border: 1px solid $white;
+        padding: 10px;
+        line-height: 1;
+      }
+    }
+  }
 }
