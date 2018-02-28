@@ -1523,12 +1523,12 @@ footer {
 
       input[type=text], input[type=email] {
         width: 100%;
-        border-bottom: 1px solid $white;
+        border-bottom: 2px solid $white;
       }
 
       input[type=submit] {
         padding: 10px;
-        border: 1px solid $white;
+        border: 2px solid $white;
         line-height: 1;
       }
     }

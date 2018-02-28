@@ -189,6 +189,7 @@
 						</div>
 					</div>
 					<div class="right">
+						<?php echo 'Current PHP version: ' . phpversion(); ?>
 						<h3>Upcoming Sunday Events</h3>
 						<div class="event-list">
 							<div class="toggle-list">
