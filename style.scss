@@ -543,8 +543,12 @@ header {
     will-change: opacity;
     z-index: 100;
 
-    svg{
+    .wrapper {
       max-width: 620px;
+      
+      svg{
+        width: 100%;
+      }
     }
 
     &.show {
@@ -1745,7 +1749,7 @@ footer {
   .menu-connect {
     display: none;
   }
-  
+
   .splash {
 
     .collage {
