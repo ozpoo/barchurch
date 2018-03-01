@@ -199,11 +199,11 @@
     }
 }
 
-$black: #1c1c1c;
+$black: #1C1C1C;
 $white: white;
-$grey-01: #dfdfdf;
-$grey-02: #cecece;
-$grey-03: #d6d6d6;
+$grey-01: #DFDFDF;
+$grey-02: #CECECE;
+$grey-03: #D6D6D6;
 $font-01: 'Sweet Sans Pro';
 $font-02: 'Rasmus';
 $stroke-weight: 3px;
@@ -288,6 +288,14 @@ h4 {
 h5 {
   font-size: 1.4em;
   line-height: 1.2;
+}
+
+.st0 {
+  fill: $white;
+}
+
+.st1 {
+  fill: $black;
 }
 
 a {
@@ -566,12 +574,17 @@ header {
       position: absolute;
       top: 50%;
       left: 50%;
+      width: 20vw;
       transform: translate3d(-50%, -50%, 0);
       backface-visibility: hidden;
       color: white;
       transition: 1220ms transform cubic-bezier(.165, .84, .44, 1);
       will-change: transform;
       z-index: 1;
+
+      svg {
+        width: 100%;
+      }
 
       &.loaded {
         transform: translate3d(-50%, -50%, 0) translateX(-34vw) translateY(-10vh);
@@ -596,9 +609,13 @@ header {
       }
 
       p {
-        padding: calc(40px + .4vw);
-        padding-top: 0px;
+        padding: $unit-01;
         text-align: right;
+
+        svg {
+          display: inline-block;
+          vertical-align: bottom;
+        }
       }
 
       h2 {
@@ -632,6 +649,11 @@ header {
       transition: 1220ms transform cubic-bezier(.165, .84, .44, 1);
       will-change: transform;
       z-index: 1;
+      width: 30vw;
+
+      svg {
+        width: 100%;
+      }
 
       &.loaded {
         transform: translate3d(-50%, -50%, 0) translateX(24vw) translateY(12vh);
@@ -649,7 +671,7 @@ header {
       text-align: center;
 
       h2 {
-        font-size: 2.4em;
+        font-size: 2.2em;
         line-height: 1.4;
       }
     }
@@ -746,7 +768,7 @@ header {
       z-index: 2;
 
       &.loaded {
-        transform: translate3d(-50%, -50%, 0) translateY(0vh) translateX(2vw);
+        transform: translate3d(-50%, -50%, 0) translateY(-4vh) translateX(2vw);
       }
     }
 
@@ -761,7 +783,7 @@ header {
       z-index: 1;
 
       &.loaded {
-        transform: translate3d(-50%, -50%, 0) translateX(24vw) translateY(36vh);
+        transform: translate3d(-50%, -50%, 0) translateX(24vw) translateY(40vh);
       }
     }
   }
@@ -1678,6 +1700,116 @@ footer {
         border: 2px solid $white;
         padding: 10px;
         line-height: 1;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .splash {
+
+    .collage {
+      position: relative;
+      height: 70vh;
+      z-index: 10;
+    }
+
+    .intro {
+      position: relative;
+      padding-bottom: 8vh;
+      z-index: 10;
+
+      .text {
+        padding: 0 8vw;
+        text-align: center;
+
+        h2 {
+          font-size: 1.8em;
+          line-height: 1.4;
+        }
+      }
+
+      .buttons {
+        padding: 0 8vw;
+        text-align: center;
+
+        .button {
+          margin: 0 $unit-01;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .menu-connect {
+    display: none;
+  }
+  
+  .splash {
+
+    .collage {
+      height: auto;
+
+      .logo {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100vw;
+        text-align: center;
+        margin: auto!important;
+        transform: translate3d(0%, 0%, 0%)!important;
+
+        svg {
+          width: 40vw;
+        }
+      }
+
+      .text {
+        display: none;
+      }
+
+      .image {
+        position: relative;
+        top: auto;
+        left: auto;
+        margin: auto!important;
+        width: 100vw;
+        transform: translate3d(0%, 0%, 0%)!important;
+        backface-visibility: hidden;
+        transition: 1220ms transform cubic-bezier(.165, .84, .44, 1);
+        will-change: transform;
+        z-index: 2;
+      }
+
+      .illustration {
+        display: none;
+      }
+    }
+
+    .intro {
+      position: relative;
+      padding-top: 4vh;
+      padding-bottom: 4vh;
+      z-index: 10;
+
+      .text {
+        padding: 0 4vw;
+        text-align: center;
+
+        h2 {
+          font-size: 1.4em;
+          line-height: 1.4;
+        }
+      }
+
+      .buttons {
+        padding: 0 4vw;
+        text-align: center;
+
+        .button {
+          margin: 0 $unit-01;
+        }
       }
     }
   }
