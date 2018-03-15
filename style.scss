@@ -545,7 +545,7 @@ header {
 
     .wrapper {
       max-width: 620px;
-      
+
       svg{
         width: 100%;
       }
@@ -1706,6 +1706,12 @@ footer {
         line-height: 1;
       }
     }
+  }
+}
+
+.foot {
+  a {
+    border-bottom: 1px solid $black;
   }
 }
 
