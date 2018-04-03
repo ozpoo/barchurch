@@ -1,7 +1,7 @@
 <div class="posts">
 
 	<?php
-		// query_posts('showposts=1'); 
+		// query_posts('showposts=1');
 		if (have_posts()): while (have_posts()) : the_post(); ?>
 		<article class="post">
 
@@ -18,10 +18,10 @@
 			<div class="right">
 				<div class="main">
 					<p><small><?php echo get_the_date(); ?></small></p>
-					<?php the_content(); ?>
+					<?php echo get_field("summary"); ?>
 				</div>
 				<div class="sub">
-					<?php echo get_field("sub"); ?>
+					<?php echo get_field("description"); ?>
 				</div>
 				<div class="footer">
 					<p><a href="<?php echo site_url( '/category/' . $categories[0]->slug, 'http' ); ?>" class="button"><?php echo esc_html( $categories[0]->name ); ?></a></p>
