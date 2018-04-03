@@ -7,6 +7,7 @@
 
 			<div class="left">
 				<h3><?php the_title(); ?></h3>
+				<p><small><?php echo get_the_date(); ?></small></p>
 				<p><small>Have something to say about your own experience at Bar Church? We would love to hear it!</small></p>
 				<p><a class="toggle-modal-experience" href="/"><small>Submit Experience</small></a></p>
 				<!-- <p>
@@ -17,7 +18,6 @@
 
 			<div class="right">
 				<div class="main">
-					<p><small><?php echo get_the_date(); ?></small></p>
 					<?php echo get_field("sum"); ?>
 				</div>
 				<div class="sub">
