@@ -1365,11 +1365,13 @@ header {
 
 .journal, .category, .single {
 
-  a {
-    border-bottom: 1px solid $black;
+  .main, .sub {
+    a {
+      border-bottom: 1px solid $black;
 
-    &:hover {
-      border-bottom-color: transparent;
+      &:hover {
+        border-bottom-color: transparent;
+      }
     }
   }
 
