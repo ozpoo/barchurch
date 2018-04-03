@@ -62,7 +62,7 @@
 
 				var init = function() {
 					$("iframe").each(function(){
-						$(this).attr("data-ratio", $(this).attr("height")/$(this).attr("width"));
+						$(this).attr("data-ratio", $(this).attr("width")/$(this).attr("height"));
 						$(this).removeAttr("height");
 						$(this).removeAttr("width");
 					});
