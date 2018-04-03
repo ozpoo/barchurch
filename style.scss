@@ -1365,6 +1365,14 @@ header {
 
 .journal, .category, .single {
 
+  a {
+    border-bottom: 1px solid $black;
+
+    &:hover {
+      border-bottom-color: transparent;
+    }
+  }
+
   .header {
     font-size: .6em;
     letter-spacing: .04em;
