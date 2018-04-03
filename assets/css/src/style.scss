@@ -1365,6 +1365,12 @@ header {
 
 .journal, .category, .single {
 
+  .header {
+    font-size: .6em;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+  }
+
   .title-fade {
     display: flex;
     position: fixed;
