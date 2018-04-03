@@ -463,6 +463,11 @@ header {
           transform-origin: top left;
         }
       }
+      .hider {
+        position: absolute;
+        top: 0px;
+        overflow: hidden;
+      }
     }
 
     ul {
@@ -525,7 +530,13 @@ header {
   }
 }
 
-.splash {
+.splash, .about .splash {
+
+  .donate {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+  }
 
   .title-fade {
     display: flex;
@@ -686,6 +697,15 @@ header {
 
       .button {
         margin: 0 $unit-01;
+      }
+    }
+
+    .directions {
+      text-align: center;
+      padding: 16vh 0;
+
+      a {
+        border-bottom: 2px solid $black;
       }
     }
   }
@@ -1716,7 +1736,7 @@ footer {
 }
 
 @media only screen and (max-width: 1024px) {
-  .splash {
+  .splash, .about .splash {
 
     .collage {
       position: relative;
@@ -1756,7 +1776,7 @@ footer {
     display: none;
   }
 
-  .splash {
+  .splash, .about .splash {
 
     .collage {
       height: auto;
