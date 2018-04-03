@@ -52,41 +52,48 @@
 				var offsetLeft, offsetTop, lastX, lastY, pos;
 
 				$(window).load(function(){
-
 					init();
 					animate();
-
 				});
 
 				$(window).resize (function() {
-
+					size();
 				});
 
 				var init = function() {
-
+					$("iframe").each(function(){
+						$(this).attr("data-ratio", $(this).attr("height")/$(this).attr("width"));
+						$(this).removeAttr("height");
+						$(this).removeAttr("width");
+					});
 					setTimeout(function(){
 						$(".title-fade").removeClass("show");
 					}, 1220);
+					size();
+				}
 
+				function size() {
+					$("iframe").each(function(){
+						$(this).height($(this).width()*$(this).attr("data-ratio"));
+					});
 				}
 
 				var animate = function(time) {
-
 					requestAnimationFrame( animate );
-
 				}
 
 				var requestAnimationFrame = (function(){
-				 return  window.requestAnimationFrame       ||
-								 window.webkitRequestAnimationFrame ||
-								 window.mozRequestAnimationFrame    ||
-								 window.oRequestAnimationFrame      ||
-								 window.msRequestAnimationFrame     ||
-								 function(callback, element){
-										 window.setTimeout(callback, 1000 / 60);
-								 };
-				 })();
-
+					return
+					window.requestAnimationFrame       ||
+					window.webkitRequestAnimationFrame ||
+					window.mozRequestAnimationFrame    ||
+					window.oRequestAnimationFrame      ||
+					window.msRequestAnimationFrame     ||
+					function(callback, element){
+					window.setTimeout(callback, 1000 / 60);
+					};
+				})();
+				
 			});
 
 		})(jQuery, this);
