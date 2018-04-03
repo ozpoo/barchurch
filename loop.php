@@ -20,7 +20,7 @@
 					<p><small><?php echo get_the_date(); ?></small></p>
 					<?php echo get_field("sum"); ?>
 				</div>
-				<div class="description">
+				<div class="sub">
 					<?php echo get_field("description"); ?>
 				</div>
 				<div class="footer">
