@@ -261,7 +261,7 @@ img, video {
 	width: 100%;
 }
 
-p, ul, ol, h1, h2, h3, h4, .description figure {
+p, ul, ol, h1, h2, h3, h4, .sub figure {
 	padding: $unit-02;
 }
 
@@ -1365,13 +1365,6 @@ header {
 
 .journal, .category, .single {
 
-  .description {
-    iframe {
-      width: 100%;
-      height: auto;
-    }
-  }
-
   .header {
     font-size: .6em;
     text-transform: uppercase;
@@ -1454,29 +1447,10 @@ header {
 
         .sub {
           padding-right: 8vw;
-          h1 {
-            font-family: $font-01;
-            font-size: 1.4em;
-            font-weight: normal;
-          }
-          h2 {
-            font-family: $font-01;
-            font-size: 1.3em;
-            font-weight: normal;
-          }
-          h3 {
-            font-family: $font-01;
-            font-size: 1.2em;
-            font-weight: normal;
-          }
-          h4 {
-            font-family: $font-01;
-            font-size: 1.1em;
-            font-weight: normal;
-          }
 
-          strong, b {
-            font-weight: bold;
+          iframe {
+            width: 100%;
+            height: auto;
           }
 
           em, i {
