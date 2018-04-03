@@ -1365,6 +1365,13 @@ header {
 
 .journal, .category, .single {
 
+  .description {
+    iframe {
+      width: 100%;
+      height: auto;
+    }
+  }
+
   .header {
     font-size: .6em;
     letter-spacing: .04em;
