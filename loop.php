@@ -18,9 +18,9 @@
 			<div class="right">
 				<div class="main">
 					<p><small><?php echo get_the_date(); ?></small></p>
-					<?php echo get_field("summary"); ?>
+					<?php echo get_field("sum"); ?>
 				</div>
-				<div class="sub">
+				<div class="description">
 					<?php echo get_field("description"); ?>
 				</div>
 				<div class="footer">
