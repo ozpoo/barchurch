@@ -1562,11 +1562,13 @@ header {
     padding-top: 25vh;
     padding-bottom: 20vh;
 
-    a {
-      border-bottom: 1px solid $black;
+    .answer {
+      a {
+        border-bottom: 1px solid $black;
 
-      &:hover {
-        border-bottom-color: transparent;
+        &:hover {
+          border-bottom-color: transparent;
+        }
       }
     }
 
