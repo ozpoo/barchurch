@@ -1562,6 +1562,14 @@ header {
     padding-top: 25vh;
     padding-bottom: 20vh;
 
+    a {
+      border-bottom: 1px solid $black;
+
+      &:hover {
+        border-bottom-color: transparent;
+      }
+    }
+
     .left {
       width: 30vw;
       padding: 8vh 8vw;
