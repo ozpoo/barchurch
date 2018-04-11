@@ -55,13 +55,13 @@
 			});
 
 			$(".menu-main").data("transform", 0);
-			lastScrollTop = scrollTop = $(document).scrollTop();
+			lastScrollTop = scrollTop = $(".scroller").scrollTop();
 
 		}
 
 		function animate() {
 			requestAnimationFrame( animate );
-			scrollTop = $(document).scrollTop();
+			scrollTop = $(".scroller").scrollTop();
 
 			switch (getDirection()) {
 

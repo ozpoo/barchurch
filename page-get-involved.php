@@ -8,6 +8,17 @@
 
 		<section class="content">
 
+			<?php $group = get_field('donate'); ?>
+			<div class="left">
+				<h3><?php echo $group['title']; ?></h3>
+			</div>
+			<div class="right">
+				<div class="main">
+					<p><?php echo $group['description']; ?></p>
+				</div>
+				<p><a class="button" href="https://barchurch.churchcenter.com/giving?open-in-church-center-modal=true">Donate Now</a></p>
+			</div>
+
 			<?php $group = get_field('question'); ?>
 			<div class="left">
 				<h3><?php echo $group['title']; ?></h3>
@@ -39,17 +50,6 @@
 					<p><?php echo $group['description']; ?></p>
 				</div>
 				<p><a class="button toggle-modal-idea" href="/">Submit Idea</a></p>
-			</div>
-
-			<?php $group = get_field('donate'); ?>
-			<div class="left">
-				<h3><?php echo $group['title']; ?></h3>
-			</div>
-			<div class="right">
-				<div class="main">
-					<p><?php echo $group['description']; ?></p>
-				</div>
-				<p><a class="button" href="https://barchurch.churchcenter.com/giving?open-in-church-center-modal=true">Donate Now</a></p>
 			</div>
 
 			<?php $group = get_field('newsletter'); ?>
