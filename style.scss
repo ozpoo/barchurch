@@ -1158,18 +1158,18 @@ header {
       border-bottom: $stroke-weight solid $black;
 
       .slide {
-        width: 100vh;
+        width: auto;
         height: 100vh;
 
         figure {
-          width: 100%;
+          width: auto;
           height: 100%;
           padding: 4vh 4vw;
 
           img {
-            width: 100%;
+            // object-fit: cover;
+            width: auto;
             height: 100%;
-            object-fit: cover;
           }
         }
       }
