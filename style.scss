@@ -810,7 +810,7 @@ header {
       z-index: 2;
 
       &.loaded {
-        transform: translate3d(-50%, -50%, 0) translateY(-4vh) translateX(2vw);
+        transform: translate3d(-50%, -50%, 0) translateY(0vh) translateX(2vw);
       }
     }
 
@@ -825,7 +825,7 @@ header {
       z-index: 1;
 
       &.loaded {
-        transform: translate3d(-50%, -50%, 0) translateX(24vw) translateY(40vh);
+        transform: translate3d(-50%, -50%, 0) translateX(24vw) translateY(44vh);
       }
     }
   }
