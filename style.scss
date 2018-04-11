@@ -637,7 +637,7 @@ header {
       z-index: 3;
 
       &.loaded {
-        transform: translate3d(-50%, -50%, 0) translateX(-22vw) translateY(16vh);
+        transform: translate3d(-50%, -50%, 0) translateX(-22vw) translateY(18vh);
       }
 
       p {
@@ -668,7 +668,7 @@ header {
       z-index: 2;
 
       &.loaded {
-        transform: translate3d(-50%, -50%, 0) translateY(-12vh) translateX(6vw);
+        transform: translate3d(-50%, -50%, 0) translateY(-6vh) translateX(6vw);
       }
     }
 
@@ -688,7 +688,7 @@ header {
       }
 
       &.loaded {
-        transform: translate3d(-50%, -50%, 0) translateX(24vw) translateY(12vh);
+        transform: translate3d(-50%, -50%, 0) translateX(24vw) translateY(18vh);
       }
     }
   }
@@ -718,7 +718,8 @@ header {
     }
 
     .directions {
-      padding: 16vh 0;
+      padding: 12vh 0;
+      padding-top: 0px;
       text-align: center;
 
       a {
@@ -832,6 +833,7 @@ header {
   .intro {
     position: relative;
     padding: 16vh 0;
+    padding-top: 0px;
     padding-bottom: 26vh;
     border-bottom: $stroke-weight solid $black;
     z-index: 10;
