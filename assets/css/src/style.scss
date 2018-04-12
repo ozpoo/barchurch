@@ -1892,6 +1892,44 @@ footer {
       }
     }
   }
+
+  .get-involved {
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      padding-top: 25vh;
+      padding-bottom: 20vh;
+
+      .left {
+        width: 100vw;
+        padding: 2vh 8vw;
+
+        h3 {
+          padding-top: 0px;
+        }
+
+        h3, p {
+          padding-right: 0px;
+          padding-left: 0px;
+        }
+      }
+
+      .right {
+        width: 100vw;
+        padding: 2vh 8vw;
+
+        .main {
+          font-size: 1.3em;
+          line-height: 1.5;
+        }
+
+        p {
+          padding-top: 0px;
+          padding-left: 0px;
+        }
+      }
+    }
+  }
   .post-type-archive-questions {
 
     .title-fade {
