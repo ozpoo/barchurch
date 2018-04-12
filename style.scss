@@ -406,7 +406,6 @@ header {
   &.hide {
 
     .menu-main {
-
       transform: translate3d(0, -100%, 0);
     }
   }
@@ -1839,6 +1838,41 @@ footer {
     display: none;
   }
 
+  header {
+    .menu-main {
+      display: none;
+    }
+  }
+
+  .about {
+    .content {
+      display: block;
+
+      .left, .right {
+        width: 100%;
+      }
+
+      .left {
+        .image {
+          transform: none;
+        }
+      }
+
+      .right {
+        padding-right: 0px;
+      }
+    }
+
+    .quote {
+      display: block;
+      padding-bottom: 0px;
+
+      .head, .body {
+        width: 100%;
+      }
+    }
+  }
+
   .splash, .about .splash {
 
     .collage {
@@ -1901,8 +1935,39 @@ footer {
         text-align: center;
 
         .button {
-          margin: 0 $unit-01;
+          margin: 1vh $unit-01;
         }
+      }
+    }
+
+    .finale {
+      .text {
+        padding-right: 0px;
+        padding-left: 0px;
+
+        h1 {
+          font-size: .6em;
+          line-height: 1.2;
+        }
+
+        .buttons {
+
+          a {
+            &.button {
+              margin-top: 1vh;
+              margin-bottom: 1vh;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    .grid {
+      display: block;
+      div {
+        width: 100%!important;
       }
     }
   }
