@@ -643,7 +643,7 @@ header {
       z-index: 3;
 
       &.loaded {
-        transform: translate3d(-50%, -50%, 0) translateX(-22vw) translateY(18vh);
+        transform: translate3d(-50%, -50%, 0) translateX(-22vw) translateY(22vh);
       }
 
       p {
@@ -674,7 +674,7 @@ header {
       z-index: 2;
 
       &.loaded {
-        transform: translate3d(-50%, -50%, 0) translateY(-6vh) translateX(6vw);
+        transform: translate3d(-50%, -50%, 0) translateY(-2vh) translateX(6vw);
       }
     }
 
