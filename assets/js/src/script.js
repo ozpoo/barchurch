@@ -5,16 +5,19 @@
 		'use strict';
 
 		$(window).load (function() {
-
 			init();
 			animate();
+		});
 
+		$(window).resize (function() {
+			size();
 		});
 
 		var lastScrollTop, scrollTop;
 
 		function init() {
 
+			size();
 			$("body").addClass("show");
 
 			$(".connect-toggle button").on("mouseenter", function(){
@@ -99,6 +102,10 @@
 			$(".menu-main").css("transform", "translate3d(0,"+newTransform+"px,0)");
 			// console.log(newTransform);
 
+		}
+
+		function size() {
+			$(".title-flash").height($(window).height());
 		}
 
 		function getDirection() {
