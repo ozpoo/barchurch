@@ -249,6 +249,7 @@ body {
   left: 0px;
   height: 100%;
   overflow: auto;
+  overflow-x: hidden;
  -webkit-overflow-scrolling: touch;
 }
 
@@ -1849,7 +1850,7 @@ footer {
       display: block;
 
       .left, .right {
-        width: 100%;
+        width: auto;
       }
 
       .left {
@@ -1868,7 +1869,8 @@ footer {
       padding-bottom: 0px;
 
       .head, .body {
-        width: 100%;
+        width: auto;
+        padding: 8vh 8vw;
       }
     }
   }
@@ -1941,6 +1943,9 @@ footer {
     }
 
     .finale {
+      padding-top: 0px;
+      padding-bottom: 0px;
+
       .text {
         padding-left: 0px;
         padding-right: 0px;
@@ -1949,15 +1954,11 @@ footer {
           font-size: .6em;
           line-height: 1.2;
         }
-
-        .buttons {
-
-          a {
-            &.button {
-              margin-top: 1vh;
-              margin-bottom: 1vh;
-            }
-          }
+      }
+      .buttons {
+        .button {
+          margin-top: 1vh;
+          margin-bottom: 1vh;
         }
       }
     }
