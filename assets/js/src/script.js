@@ -32,6 +32,12 @@
 				$(".events-modal").toggleClass("show");
 			});
 
+			$(".toggle-mobile-nav").on("click", function(ev){
+				ev.preventDefault();
+				$(".mobile-nav").toggleClass("show");
+				$(this).toggleClass("active");
+			});
+
 			$(".toggle-modal-contact").on("click", function(ev){
 				ev.preventDefault();
 				$(".contact-modal").toggleClass("show");
