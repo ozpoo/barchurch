@@ -105,7 +105,7 @@
 		}
 
 		function size() {
-			$(".title-flash").height($(window).height());
+			$(".title-fade").height($(window).height());
 		}
 
 		function getDirection() {
