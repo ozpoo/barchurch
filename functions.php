@@ -13,29 +13,18 @@ if (function_exists('add_theme_support')) {
   add_theme_support('automatic-feed-links');
 
   add_theme_support('post-thumbnails');
-  add_image_size('12',   2880, '', true);
-  add_image_size('11',   2560, '', true);
-  add_image_size('10',   1920, '', true);
-  add_image_size('09',   1440, '', true);
-  add_image_size('08',   1366, '', true);
-  add_image_size('07',   1280, '', true);
-  add_image_size('06',   1024, '', true);
-  add_image_size('05',   960, '', true);
-  add_image_size('04',   800, '', true);
-  add_image_size('03',   640, '', true);
-  add_image_size('02',   480, '', true);
-  add_image_size('01',   10, '', true);
-
-  add_image_size('xx-large', 3200, '', true);
-  add_image_size('x-large', 2400, '', true);
-  add_image_size('large', 1200, '', true);
-  add_image_size('large-square', 1200, 1200, true);
-  add_image_size('medium', 600, '', true);
-  add_image_size('medium-square', 600, 600, true);
-  add_image_size('small', 300, '', true);
-  add_image_size('small-square', 300, 300, true);
-  add_image_size('x-small', 150, '', true);
-  add_image_size('x-small-square', 150, 150, true);
+  add_image_size('s12',   2880, '', true);
+  add_image_size('s11',   2560, '', true);
+  add_image_size('s10',   1920, '', true);
+  add_image_size('s09',   1440, '', true);
+  add_image_size('s08',   1366, '', true);
+  add_image_size('s07',   1280, '', true);
+  add_image_size('s06',   1024, '', true);
+  add_image_size('s05',   960, '', true);
+  add_image_size('s04',   800, '', true);
+  add_image_size('s03',   640, '', true);
+  add_image_size('s02',   480, '', true);
+  add_image_size('s01',   10, '', true);
 }
 
 function header_scripts () {

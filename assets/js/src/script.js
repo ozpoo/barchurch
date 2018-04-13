@@ -66,6 +66,10 @@
 			$(".menu-main").data("transform", 0);
 			lastScrollTop = scrollTop = $(".scroller").scrollTop();
 
+			setTimeout(function(){
+				$(".title-fade").removeClass("show");
+			}, 1220);
+
 		}
 
 		function animate() {
