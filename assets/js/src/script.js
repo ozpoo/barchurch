@@ -2,8 +2,6 @@
 
 	$(function () {
 
-		'use strict';
-
 		$(window).load (function() {
 			init();
 			animate();
@@ -119,19 +117,17 @@
 		}
 
 		function getDirection() {
-
 			var direction;
-
-			if(lastScrollTop < scrollTop){
+			if($lastScrollTop < $scrollTop && $scrollTop > 0){
 				direction = "down";
-			} else if(lastScrollTop > scrollTop) {
+				console.log(direction);
+			} else if($lastScrollTop > $scrollTop && $scrollTop > 0) {
 				direction = "up";
+				console.log(direction);
 			} else {
 				direction = null;
 			}
-
 			return direction;
-
 		}
 
 		var requestAnimationFrame = ( function (){
