@@ -14,7 +14,6 @@
 		var lastScrollTop, scrollTop;
 
 		function init() {
-
 			size();
 			$("body").addClass("show");
 
@@ -77,12 +76,10 @@
 			switch (getDirection()) {
 
 				case "up":
-					// console.log("up");
 					setMenuTransform();
 					break;
 
 				case "down":
-					// console.log("down");
 					setMenuTransform();
 					break;
 
@@ -108,7 +105,6 @@
 			}
 			$(".menu-main").data("transform", newTransform);
 			$(".menu-main").css("transform", "translate3d(0,"+newTransform+"px,0)");
-			// console.log(newTransform);
 
 		}
 
@@ -118,10 +114,10 @@
 
 		function getDirection() {
 			var direction;
-			if($lastScrollTop < $scrollTop && $scrollTop > 0){
+			if(lastScrollTop < scrollTop && scrollTop > 0){
 				direction = "down";
 				console.log(direction);
-			} else if($lastScrollTop > $scrollTop && $scrollTop > 0) {
+			} else if(lastScrollTop > scrollTop && scrollTop > 0) {
 				direction = "up";
 				console.log(direction);
 			} else {
