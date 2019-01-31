@@ -128,16 +128,18 @@
 					<div class="wrap">
 						<section id="content" class="planner">
 							<?php
-								$secondSunday = new DateTime('second sunday of this month');
+								date_default_timezone_set("America/Vancouver");
+								$timezone = new DateTimeZone("PST");
+								$secondSunday = new DateTime('second sunday of this month', $timezone);
 								$date = date('Y-m-d');
 
 								$sundayCount = 0;
 								$today = date("d"); // Current day
 								if($date > $secondSunday->format('Y-m-d')) {
 									// If it's past the second sunday show next month
-									$month = new DateTime('next month');
+									$month = new DateTime('first day of next month', $timezone);
 								} else {
-									$month = new DateTime('this month');
+									$month = new DateTime('this month', $timezone);
 								}
 								$year = date("Y"); // Current year
 						 ?>
